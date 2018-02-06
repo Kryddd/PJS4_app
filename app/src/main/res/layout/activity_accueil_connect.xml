@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:launchMode="singleInstance"
+    tools:context="recipeit.recipeit.AccueilConnect">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#F2F2F2">
+
+        <ScrollView
+            android:id="@+id/contain_page"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="4dp">
+
+
+                <android.support.percent.PercentRelativeLayout
+                    android:id="@+id/entete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:background="#FFFFFF"
+                        android:layout_height="40dp">
+                    </android.support.constraint.ConstraintLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/banniere"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:scaleType="centerCrop"
+                        android:orientation="vertical"
+                        android:layout_marginTop="40dp"
+                        android:paddingTop="10dp"
+                        android:background="@drawable/fond">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/title_page"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/cookie"
+                                    android:gravity="right"
+                                    android:text="Une envie"
+                                    android:textSize="35dp" />
+
+                                <TextView
+                                    android:id="@+id/title_page2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/ralewaylight"
+                                    android:text=" particulière ?"
+                                    android:textSize="23dp" />
+                            </LinearLayout>
+
+                            <android.support.constraint.ConstraintLayout
+                                android:id="@+id/barre"
+                                android:layout_width="80dp"
+                                android:layout_height="2dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="3dp"
+                                android:background="#AA0909"></android.support.constraint.ConstraintLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/rech"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@drawable/textcorner"
+                                android:layout_marginTop="25dp"
+                                android:padding="5dp"
+                                android:layout_gravity="center">
+
+                                <android.support.percent.PercentRelativeLayout
+                                    android:layout_width="40dp"
+                                    android:layout_height="20dp"
+                                    android:paddingTop="3dp">
+
+                                    <ImageView
+                                        android:id="@+id/micro"
+                                        android:onClick="demarreEcoute"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:srcCompat="@drawable/micro" />
+                                </android.support.percent.PercentRelativeLayout>
+
+                                <EditText
+                                    android:id="@+id/rechercheSimple"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="15"
+                                    android:fontFamily="@font/juliussansone"
+                                    android:hint="Recherche simple"
+                                    android:inputType="text"
+                                    android:background="@android:color/transparent"
+                                    android:onClick="rech_click"
+                                    android:textSize="17dp"
+                                    android:paddingLeft="20dp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginLeft="175dp">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="10dp"
+                                    android:src="@drawable/plus"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Recherche avancée"
+                                    android:fontFamily="@font/cookie"
+                                    android:layout_marginTop="20dp"
+                                    android:textSize="25dp"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/compte"
+                        android:layout_width="match_parent"
+                        android:layout_height="23dp"
+                        android:layout_marginTop="9dp"
+                        app:srcCompat="@drawable/user"
+                        android:onClick="connexion"
+                        app:layout_marginRightPercent="80%"/>
+
+                </android.support.percent.PercentRelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="3000dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@android:drawable/btn_star_big_on" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!-- BARRE BLANCHE FOND MENU -->
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            app:layout_marginTopPercent="93%"></android.support.constraint.ConstraintLayout>
+        <!-- MENU -->
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/home"
+                    android:layout_centerHorizontal="true"
+                    app:layout_marginTopPercent="93%"
+                    app:layout_widthPercent="25%"
+                    app:srcCompat="@drawable/homeactive" />
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/add"
+                    android:layout_centerHorizontal="true"
+                    app:layout_marginTopPercent="93%"
+                    app:layout_widthPercent="20%"
+                    app:srcCompat="@drawable/add" />
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/fridge"
+                    android:layout_centerHorizontal="true"
+                    app:layout_marginTopPercent="93%"
+                    app:layout_widthPercent="20%"
+                    app:srcCompat="@drawable/fridge" />
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/recherche"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    app:layout_marginTopPercent="93%"
+                    app:layout_widthPercent="20%"
+                    app:srcCompat="@drawable/more" />
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/voyage"
+                    android:layout_centerHorizontal="true"
+                    app:layout_marginTopPercent="93%"
+                    app:layout_widthPercent="20%"
+                    app:srcCompat="@drawable/world" />
+            </android.support.percent.PercentRelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
