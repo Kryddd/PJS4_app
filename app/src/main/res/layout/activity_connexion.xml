@@ -4,6 +4,125 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="recipeit.recipeit.Connexion">
+    android:background="@color/fondBleu"
+    tools:context="recipeit.recipeit.Connexion"
+    tools:layout_editor_absoluteY="25dp">
 
+    <TextView
+        android:id="@+id/textViewConnexion"
+        android:layout_width="0dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/cookie"
+        android:text="@string/connexionText"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <TextView
+        android:id="@+id/textViewViaRéseaux"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/cookie"
+        android:text="@string/via_r_seauxText"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextMdp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextMdp"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCreerCompte" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:fontFamily="@font/ralewayregular"
+        android:hint="@string/e_mailEditText"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/textViewConnexion"
+        app:layout_constraintStart_toStartOf="@+id/textViewConnexion"
+        app:layout_constraintTop_toBottomOf="@+id/textViewConnexion" />
+
+    <EditText
+        android:id="@+id/editTextMdp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:fontFamily="@font/ralewayregular"
+        android:hint="@string/mot_de_passeEditText"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmail"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+    <Button
+        android:id="@+id/buttonCreerCompte"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/cookie"
+        android:text="créer son compte"
+        android:textAllCaps="false"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextMdp"
+        app:layout_constraintStart_toStartOf="@+id/editTextMdp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMdp" />
+
+    <ImageButton
+        android:id="@+id/buttonGooglePlus"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="centerInside"
+        android:background="@null"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/ButtonFacebook"
+        app:srcCompat="@drawable/googleplus" />
+
+    <ImageButton
+        android:id="@+id/ButtonFacebook"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerInside"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewViaRéseaux"
+        app:layout_constraintVertical_bias="0.097"
+        app:srcCompat="@drawable/Facebook_Home_logo" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
 </android.support.constraint.ConstraintLayout>
