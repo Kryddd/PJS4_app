@@ -110,7 +110,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewViaRéseaux"
         app:layout_constraintVertical_bias="0.097"
-        app:srcCompat="@drawable/Facebook_Home_logo" />
+        app:srcCompat="@drawable/facebook_home_logo" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
