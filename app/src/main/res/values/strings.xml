@@ -7,7 +7,9 @@
         Data Storage. SharedPreferences, Internal and External Storage. ListView, GridView, RelativeLayout,
         LinearLayout, Scrollbar, Spinner, Dialog, CAB, Styling, ImageView blink, TextSwitcher, Library Projects,
         How to import Android Library Projects, Progress Bar, Animation, Android Tools and many more.</string>
-    <string name="connexionText">Connexion</string>
+
+    <string name="connexionText">Accédez à </string>
+    <string name="connexionText2">mon compte</string>
     <string name="via_r_seauxText">Via Réseaux</string>
     <string name="e_mailEditText">e-mail</string>
     <string name="mot_de_passeEditText">mot de passe</string>

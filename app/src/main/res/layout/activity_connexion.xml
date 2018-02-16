@@ -8,22 +8,37 @@
     tools:context="recipeit.recipeit.Connexion"
     tools:layout_editor_absoluteY="25dp">
 
-    <TextView
-        android:id="@+id/textViewConnexion"
-        android:layout_width="0dp"
-        android:layout_height="32dp"
+    <LinearLayout
+        android:id="@+id/textConnexionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/cookie"
-        android:text="@string/connexionText"
-        android:layout_gravity="start"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        android:layout_gravity="start" >
+
+        <TextView
+            android:id="@+id/textViewConnexion"
+            android:fontFamily="@font/cookie"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/connexionText"
+            android:textColor="@android:color/black"
+            android:textSize="35sp"/>
+        <TextView
+            android:id="@+id/textViewConnexion2"
+            android:fontFamily="@font/ralewaylight"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/connexionText2"
+            android:textColor="@android:color/black"
+            android:textSize="23sp"/>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textViewViaRéseaux"
@@ -48,9 +63,9 @@
         android:fontFamily="@font/ralewayregular"
         android:hint="@string/e_mailEditText"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/textViewConnexion"
-        app:layout_constraintStart_toStartOf="@+id/textViewConnexion"
-        app:layout_constraintTop_toBottomOf="@+id/textViewConnexion" />
+        app:layout_constraintEnd_toEndOf="@+id/textConnexionLayout"
+        app:layout_constraintStart_toStartOf="@+id/textConnexionLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textConnexionLayout" />
 
     <EditText
         android:id="@+id/editTextMdp"
@@ -124,5 +139,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.05" />
 </android.support.constraint.ConstraintLayout>
