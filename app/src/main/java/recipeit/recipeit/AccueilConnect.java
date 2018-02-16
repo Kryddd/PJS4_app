@@ -7,27 +7,24 @@ import android.view.View;
 import android.widget.EditText;
 
 public class AccueilConnect extends AppCompatActivity {
-    private static EditText rech;
+
+    //à supprimer
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
         setContentView(R.layout.activity_accueil_connect);
+    }
 
-        rech = findViewById(R.id.rechercheSimple);
-        rech.setFocusableInTouchMode(false);
-        rech.setFocusable(false);
+    public void fridgeClick(View view) {
 
     }
 
-    public void rech_click(View view){
-        rech.setFocusableInTouchMode(true);
-        rech.setFocusable(true);
+    public void ajouterClick(View view) {
+
     }
 
 
-    public void connexion(View view){
-        Intent coPage = new Intent(AccueilConnect.this, Accueil.class);
-        startActivity(coPage);
-    }
+
+
 }

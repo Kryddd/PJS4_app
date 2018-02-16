@@ -15,19 +15,34 @@ public class Accueil extends AppCompatActivity {
     private static SpeechRecognizer mic;
     private static EditText rech;
     private Intent inte;
+    private boolean connected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
+        this.connected = false; // à supprimer plus tard, on récuperera ce booleen après la co
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accueil);
+
+
+
+        setLayout();
 
         rech = findViewById(R.id.rechercheSimple);
         rech.setFocusableInTouchMode(false);
         rech.setFocusable(false);
 
         initMicro();
+    }
+
+    private void setLayout() {
+        if(connected) {
+            setContentView(R.layout.activity_accueil_connect);
+        }
+        else {
+            setContentView(R.layout.activity_accueil);
+        }
     }
 
     public static EditText getRech(){
@@ -53,6 +68,30 @@ public class Accueil extends AppCompatActivity {
         rech.setFocusable(true);
     }
 
+    public void rechAvClick(View view) { //pour le menu et sur la page d'accueil
+        Intent rechAvPage = new Intent(this, RechercheAvancee.class);
+        startActivity(rechAvPage);
+    }
+
+    //options du menu
+    public void worldClick(View view) {
+
+    }
+
+    public void homeClick(View view) {
+
+    }
+
+    public void fridgeClick(View view) {
+
+    }
+
+    public void ajouterClick(View view) {
+
+    }
+
+
+    //reconnaissance vocale
     public void demarreEcoute(View view){
         rech_click(view);
         mic.startListening(inte);
