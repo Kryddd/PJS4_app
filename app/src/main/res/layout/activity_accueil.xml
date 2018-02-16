@@ -10,7 +10,7 @@
     <android.support.percent.PercentRelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#F2F2F2">
+        android:background="@color/fondGris">
 
         <ScrollView
             android:id="@+id/contain_page"
@@ -190,12 +190,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="255dp" />
+                app:layout_constraintGuide_begin="255dp"/>
 
             <ImageView
                 android:id="@+id/home"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="30dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
@@ -206,11 +206,12 @@
                 app:layout_constraintStart_toStartOf="@+id/guidelineMenu1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_marginTopPercent="93%"
-                app:layout_widthPercent="17%"
                 app:srcCompat="@drawable/homeactive" />
 
             <ImageView
                 android:id="@+id/voyage"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
@@ -221,11 +222,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_marginTopPercent="93%"
-                app:layout_widthPercent="13%"
+                app:layout_widthPercent="10%"
                 app:srcCompat="@drawable/world" />
 
             <ImageView
                 android:id="@+id/recherche"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"

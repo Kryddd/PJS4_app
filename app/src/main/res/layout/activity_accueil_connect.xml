@@ -103,7 +103,7 @@
 
                                     <ImageView
                                         android:id="@+id/micro"
-                                        android:onClick="demarreEcoute"
+                                        android:onClick="rech_click"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         app:srcCompat="@drawable/micro" />

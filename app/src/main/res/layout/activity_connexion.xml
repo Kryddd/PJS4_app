@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondBleu"
+    android:background="@color/fondGris"
     tools:context="recipeit.recipeit.Connexion"
     tools:layout_editor_absoluteY="25dp">
 
@@ -17,7 +17,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/cookie"
         android:text="@string/connexionText"
-        android:textAlignment="viewStart"
+        android:layout_gravity="start"
         android:textColor="@android:color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -124,5 +124,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2" />
+        app:layout_constraintGuide_percent="0.1" />
 </android.support.constraint.ConstraintLayout>
