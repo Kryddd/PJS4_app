@@ -228,7 +228,7 @@
         <ImageView
             android:id="@+id/recherche"
             android:onClick="rechAvClick"
-            android:layout_width="match_constraint"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guidelineMenu4"

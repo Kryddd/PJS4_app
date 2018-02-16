@@ -200,9 +200,8 @@
             app:layout_constraintGuide_percent="0.6640625" />
 
         <ImageView
-            android:id="@+id/ho
-
-  android:layout_width="0dp"
+            android:id="@+id/home"
+            android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_centerHorizontal="true"
             app:layout_constraintBottom_toBottomOf="parent"
