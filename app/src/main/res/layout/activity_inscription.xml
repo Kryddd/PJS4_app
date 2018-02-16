@@ -5,12 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/fondGris"
-    tools:context="recipeit.recipeit.Connexion"
-    tools:layout_editor_absoluteY="25dp">
+    tools:context="recipeit.recipeit.inscription">
 
 
     <LinearLayout
-        android:id="@+id/textConnexionLayout"
+        android:id="@+id/textInscriptionLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -23,26 +22,31 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/cookie"
             android:gravity="left"
-            android:text="@string/connexionText"
+            android:text="@string/inscriptionText"
             android:textColor="@android:color/black"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
             android:textSize="35sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ralewaylight"
-            android:text="@string/connexionText2"
+            android:text="@string/inscriptionText2"
             android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
             android:textSize="23sp" />
     </LinearLayout>
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/barre"
-        android:layout_width="95dp"
+        android:layout_width="match_parent"
         android:layout_height="2dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="4dp"
         android:background="#AA0909"
-        app:layout_constraintTop_toBottomOf="@+id/textConnexionLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/textInscriptionLayout"
+        />
 
     <LinearLayout
         android:id="@+id/textEmailLayout"
@@ -53,8 +57,8 @@
         android:layout_marginTop="15dp"
         android:background="@drawable/textbackground"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/textConnexionLayout"
-        app:layout_constraintStart_toStartOf="@+id/textConnexionLayout"
+        app:layout_constraintEnd_toEndOf="@+id/textInscriptionLayout"
+        app:layout_constraintStart_toStartOf="@+id/textInscriptionLayout"
         app:layout_constraintTop_toBottomOf="@+id/barre">
 
         <ImageView
@@ -83,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/textbackground"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/textEmailLayout"
@@ -110,8 +114,39 @@
             android:inputType="textPassword" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/VerifMdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/textbackground"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/textEmailLayout"
+        app:layout_constraintStart_toStartOf="@+id/textEmailLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textMdpLayout">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:srcCompat="@drawable/connexion_mdp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:ems="10"
+            android:paddingLeft="15dp"
+            android:textColor="#ffffff"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/ralewaylight"
+            android:hint="Vérifier le mot de passe"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
     <Button
-        android:id="@+id/buttonValider"
+        android:id="@+id/buttonCreerCompte"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="80dp"
@@ -126,76 +161,7 @@
         android:background="#ffffff"
         app:layout_constraintEnd_toEndOf="@+id/textMdpLayout"
         app:layout_constraintStart_toStartOf="@+id/textMdpLayout"
-        app:layout_constraintTop_toBottomOf="@+id/textMdpLayout" />
-
-
-    <Button
-        android:id="@+id/buttonCreerCompte"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="13dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:fontFamily="@font/ralewaythin"
-        android:text="Créer un compte"
-        android:textAllCaps="false"
-        android:textSize="20sp"
-        android:background="#ffffff"
-        app:layout_constraintEnd_toEndOf="@+id/textMdpLayout"
-        app:layout_constraintStart_toStartOf="@+id/textMdpLayout"
-        app:layout_constraintTop_toBottomOf="@+id/buttonValider"
-        android:onClick="creerCompte"/>
-
-    <TextView
-        android:id="@+id/textViewViaRéseaux"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/cookie"
-        android:text="@string/via_r_seauxText"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/textMdpLayout"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/textMdpLayout"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCreerCompte" />
-
-    <ImageButton
-        android:id="@+id/buttonGooglePlus"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:scaleType="centerInside"
-        android:background="@null"
-        app:layout_constraintDimensionRatio="w,1:1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/ButtonFacebook"
-        app:srcCompat="@drawable/googleplus"
-        android:visibility="gone"/>
-
-    <ImageButton
-        android:id="@+id/ButtonFacebook"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="centerInside"
-        android:background="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="w,1:1"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewViaRéseaux"
-        app:layout_constraintVertical_bias="0.097"
-        app:srcCompat="@drawable/facebook_home_logo"
-        android:visibility="gone"/>
+        app:layout_constraintTop_toBottomOf="@+id/VerifMdp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -210,6 +176,5 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.03" />
-
 
 </android.support.constraint.ConstraintLayout>
