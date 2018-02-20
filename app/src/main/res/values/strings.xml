@@ -8,12 +8,15 @@
         LinearLayout, Scrollbar, Spinner, Dialog, CAB, Styling, ImageView blink, TextSwitcher, Library Projects,
         How to import Android Library Projects, Progress Bar, Animation, Android Tools and many more.</string>
 
-    <string name="connexionText">Connexion à</string>
+    <string name="connexionText">Connexion à </string>
     <string name="connexionText2">&#032;mon compte</string>
     <string name="inscriptionText">Bienvenue sur</string>
     <string name="inscriptionText2">&#032;Recipe it !</string>
     <string name="via_r_seauxText">Via Réseaux</string>
     <string name="e_mailEditText">pseudo</string>
     <string name="mot_de_passeEditText">mot de passe</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
