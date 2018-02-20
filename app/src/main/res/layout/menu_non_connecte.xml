@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/Menu"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineMenu">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineMenu1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33072916" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineMenu2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6640625" />
+
+        <ImageView
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/descr_btn_home"
+            android:onClick="accueilClick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineMenu2"
+            app:layout_constraintStart_toStartOf="@+id/guidelineMenu1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/homeactive" />
+
+        <ImageView
+            android:id="@+id/voyage"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/descr_btn_voyage"
+            android:onClick="worldClick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineMenu1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_widthPercent="10%"
+            app:srcCompat="@drawable/world" />
+
+        <ImageView
+            android:id="@+id/recherche"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:contentDescription="@string/descr_btn_recherche"
+            android:onClick="rechAvClick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guidelineMenu2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_widthPercent="13%"
+            app:srcCompat="@drawable/more" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+</android.support.constraint.ConstraintLayout>
